@@ -28,7 +28,8 @@ export const AuthPage = () => {
     try {
       const data = await request('/api/auth/register', 'POST', {...form})
       message(data.message)
-
+      const login = await request('/api/auth/login', 'POST', {...form})
+      auth.login(login.token, login.userId)
     } catch (e) {}
   }
   
@@ -56,6 +57,7 @@ export const AuthPage = () => {
                   type="text"
                   name="email"
                   className="yellow-input"
+                  value={form.email}
                   onChange={changeHandler}
                 />
                 <label htmlFor="email">First Name</label>
@@ -67,6 +69,7 @@ export const AuthPage = () => {
                   type="password"
                   name="password"
                   className="yellow-input"
+                  value={form.password}
                   onChange={changeHandler}
                 />
                 <label htmlFor="password">First Name</label>
