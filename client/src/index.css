@@ -7,6 +7,9 @@
 .card-action .btn {
     flex: 0 40%;
 }
+.container {
+    overflow: hidden;
+}
 
 input.yellow-input {
     border-bottom: 1px solid #fff!important;

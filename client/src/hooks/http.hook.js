@@ -33,6 +33,3 @@ export const useHTTP = () => {
   
   return {loading, request, error, clearError}
 }
-
-export class useHttp {
-}

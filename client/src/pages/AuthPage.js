@@ -60,7 +60,7 @@ export const AuthPage = () => {
                   value={form.email}
                   onChange={changeHandler}
                 />
-                <label htmlFor="email">First Name</label>
+                <label htmlFor="email">Email</label>
               </div>
               <div className="input-field">
                 <input
@@ -72,7 +72,8 @@ export const AuthPage = () => {
                   value={form.password}
                   onChange={changeHandler}
                 />
-                <label htmlFor="password">First Name</label>
+                <label htmlFor="password">Password</label>
+                <span>Не меньше 6 символов, пожалуйста</span>
               </div>
             </div>
           </div>
